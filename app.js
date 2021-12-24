@@ -8,7 +8,7 @@ var Dich_vu = http.createServer(async function(req, res) {
     if (req.url === '/sms') {
         var json = `{
             "ApiKey": "C671FB9BF15391FA5FFC62A3AC9A34",
-            "Content": "15 la ma xac minh dang ky Baotrixemay cua ban",
+            "Content": "ádfsd@gmailcom la ma xac minh dang ky Baotrixemay cua ban",
             "Phone": "0945078855",
             "SecretKey": "D3C47022E82732DD589C9E2AC56742",
             "IsUnicode": "0",
@@ -27,6 +27,7 @@ var Dich_vu = http.createServer(async function(req, res) {
         // result.data.data; // '{"answer":42}'
 
         // result.data.headers['Content-Type']; // 'application/json',
+        console.log(result);
         res.write('gui tin thanh cong');
         res.end();
     } else if (req.url === '/zalo') {
@@ -60,7 +61,7 @@ var Dich_vu = http.createServer(async function(req, res) {
         // result.data.data; // '{"answer":42}'
 
         // result.data.headers['Content-Type']; // 'application/json',
-        // console.log(result);
+        console.log(result);
         res.write('gui tin zalo thanh cong');
         res.end();
     } else {

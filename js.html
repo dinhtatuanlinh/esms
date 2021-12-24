@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        var settings = {
+            "url": "http://rest.esms.vn/MainService.svc/json/SendMultipleMessage_V4_post_json/",
+            "method": "POST",
+            "timeout": 0,
+            "headers": {
+                "Content-Type": "application/json"
+            },
+            "data": JSON.stringify({
+                "ApiKey": "C671FB9BF15391FA5FFC62A3AC9A34",
+                "Content": "linh day nhan duoc tin nhan bao nhe dang test sms",
+                "Phone": "0834808709",
+                "SecretKey": "D3C47022E82732DD589C9E2AC56742",
+                "IsUnicode": "0",
+                "Brandname": "DKQT.SAIGON",
+                "SmsType": "2"
+            }),
+        };
+
+        $.ajax(settings).done(function(response) {
+            console.log(response);
+        });
+    </script>
+</body>
+
+</html>
